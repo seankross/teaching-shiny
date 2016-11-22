@@ -1,0 +1,30 @@
+---
+title: "Teaching Shiny Example"
+author: "Sean Kross"
+date: "November 22, 2016"
+output: html_document
+---
+
+### ui.R
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::read_chunk("app/ui.R")
+```
+
+```{r ui, eval=FALSE}
+```
+
+### server.R
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::read_chunk("app/server.R")
+```
+
+```{r server, eval=FALSE}
+```
+
+```{r, echo=FALSE}
+library(webshot)
+appshot(app = "app/", file = "app.png", vheight = 300)
+knitr::include_graphics("app.png")
+```
